@@ -1,0 +1,54 @@
+<!-- TODO
+
+1. Include other currencies
+2. Better styling(possibly with material design elements)
+3. Make a directive of the markup in the index, so it can be used in other pages as necessary
+4. better style options for tablet devices
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' href='app.css'>
+        <script src='node_modules/angular/angular.js'></script>
+        <script src='app.js'></script>
+
+        <title>Rate Calculator</title>
+    </head>
+    <body ng-app="HomeDepotApp">
+
+        <div ng-controller='converterCTRL' id='converter'>
+            <h1>Currency Converter</h1>
+            <form>
+                <p>
+                    Type in amount and select currency
+                </p>
+
+                <input title="Amount to convert" type="number" ng-change='getRates()' ng-model='amountToConvert'/>
+                <select title="Select a base currency" id="amount" ng-change='getRates()' ng-options='c as c.name for c in currencyCodes' ng-model='amountCurrency'></select>
+                <p>
+                    Converted amount
+                </p>
+                <input title="Amount to convert" type="number" ng-model="amountConverted"/>
+                <select title="Select an exchange currency" name="" id="converted" ng-options='c as c.name for c in currencyCodes' ng-model='convertedCurrency' ng-change='getRates()'></select>
+                <a ng-click='disclaimer=!disclaimer'>
+                    <p>Disclaimer</p>
+                </a>
+
+            </form>
+
+            <div id='disclaimer' ng-hide='disclaimer'>
+                <i>This widget uses the
+                    <a href='http://fixer.io'>fixer.io</a>
+                    API to determine currency exchange rates.
+                    <br><br>
+                    This widget is provided as-is, and assumes no responsibility for incorrect rates.</i>
+            </div>
+        </div>
+    </body>
+</html>

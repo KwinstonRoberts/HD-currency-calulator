@@ -1,0 +1,24 @@
+{
+  "name": "home_depot_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart":"npm install",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KwinstonRoberts/HD-rate-calulator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KwinstonRoberts/HD-rate-calulator/issues"
+  },
+  "homepage": "https://github.com/KwinstonRoberts/HD-rate-calulator#readme",
+  "dependencies": {
+    "angular": "^1.6.0",
+    "express": "^4.14.0"
+  }
+}
