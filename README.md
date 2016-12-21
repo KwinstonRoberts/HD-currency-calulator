@@ -1,4 +1,5 @@
-#HD-rate-calulator
+
+# HD-rate-calulator
 
 A currency converter for the Home Depot applicant assignment.
 
